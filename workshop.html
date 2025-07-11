@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technical Workshops</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #0b0c10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar .nav-left .icon {
+      color: #5fa9ff;
+      font-size: 1.4rem;
+    }
+
+    .navbar .nav-center {
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    .navbar .nav-center a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-center a:hover {
+      color: #5fa9ff;
+    }
+
+    .navbar .nav-right {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .navbar .nav-right button {
+      background-color: #2d72fc;
+      color: white;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header span {
+      color: #5fa9ff;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .stat-box {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 1rem 2rem;
+      text-align: center;
+      min-width: 150px;
+    }
+
+    .stat-box h2 {
+      font-size: 1.5rem;
+      color: #5fa9ff;
+    }
+
+    .workshop {
+      background: rgba(255, 255, 255, 0.07);
+      margin: 2rem auto;
+      padding: 1.5rem;
+      max-width: 800px;
+      border-radius: 16px;
+    }
+
+    .workshop-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .workshop-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .tag {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .register-btn {
+      background: #3a8bff;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+
+    .course-plan {
+      margin-top: 1rem;
+    }
+
+    .module {
+      margin-bottom: 1rem;
+    }
+
+    .module h3 {
+      color: #5fa9ff;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .navbar .nav-center {
+        display: none;
+      }
+
+      .workshop-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+     <a href="index.html">🔷IEEE AUP</a>
+     
+    </div>
+    <nav class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="Events.html">Events</a>
+      <a href="Our_team.html">Our Team</a>
+      <a href="workshop.html">Workshop</a>
+      <a href="About-us.html">About Us</a>
+      <a href="Contact_us.html">Contact Us</a>
+    </nav>
+    <div class="nav-right">
+      <button>Sign In</button>
+      <button>Sign Up</button>
+    </div>
+  </header>
+
+  <!-- ✅ Workshop Header -->
+  <header>
+    <h1>Technical <span>Workshops</span></h1>
+    <p>Enhance your skills with our hands-on workshops designed to provide practical knowledge in various technical domains.</p>
+  </header>
+
+  <!-- ✅ Stats Section -->
+  <section class="stats">
+    <div class="stat-box">
+      <h2>500+</h2>
+      <p>Students Trained</p>
+    </div>
+    <div class="stat-box">
+      <h2>100+</h2>
+      <p>Hours of Content</p>
+    </div>
+    <div class="stat-box">
+      <h2>20+</h2>
+      <p>Projects Built</p>
+    </div>
+    <div class="stat-box">
+      <h2>4+</h2>
+      <p>Domains Covered</p>
+    </div>
+  </section>
+
+  <!-- ✅ Workshop Card -->
+  <section class="workshop">
+    <div class="workshop-header">
+      <div>
+        <div class="workshop-title">DSA SERIES</div>
+        <div class="tag">📅 4 months | Aug-Dec 2024</div>
+      </div>
+      <button class="register-btn" onclick="register()">Register →</button>
+    </div>
+
+    <div class="course-plan">
+      <div class="module">
+        <h3>Module 1</h3>
+        <p>Introduction to Data Structures & Algorithms, Time & Space Complexity Analysis, Arrays and Strings</p>
+      </div>
+      <div class="module">
+        <h3>Module 2</h3>
+        <p>Linked Lists, Stacks, Queues, Trees, and Recursion</p>
+      </div>
+      <div class="module">
+        <h3>Module 3</h3>
+        <p>Graphs, Sorting, Searching, Hashing, and Dynamic Programming</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function register() {
+      alert("You have successfully registered for the DSA Series!");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IEEE AUP - Contact</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #0b0c10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+    }
+
+    .nav-left span {
+      color: #fff;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-center a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-center a:hover {
+      color: #5fa9ff;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .nav-right button {
+      background-color: #2d72fc;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 span {
+      color: #5fa9ff;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #bbb;
+      margin-bottom: 3rem;
+    }
+
+    /* Contact Cards */
+    .contact-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .box {
+      flex: 1;
+      min-width: 280px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .box i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .box h3 {
+      margin: 0.5rem 0;
+      color: #ffffff;
+    }
+
+    .box p {
+      color: #aaa;
+    }
+
+    /* Form */
+    form {
+      background: rgba(255, 255, 255, 0.07);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    form h2 {
+      color: #5fa9ff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    form input::placeholder, form textarea::placeholder {
+      color: #ccc;
+    }
+
+    form button {
+      padding: 0.8rem 2rem;
+      background-color: #5fa9ff;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .confirmation {
+      text-align: center;
+      margin-top: 1rem;
+      color: lightgreen;
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-center {
+        display: none;
+      }
+
+      .contact-boxes {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-left">
+      <div ><a href="index.html">🔷IEEE AUP</a></div>
+    </div>
+    <div class="nav-center">
+    <a href="index.html">Home</a>
+      <a href="Events.html">Events</a>
+      <a href="Our_team.html">Our Team</a>
+      <a href="workshop.html">Workshop</a>
+      <a href="About-us.html">About Us</a>
+      <a href="Contact_us.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button>Sign In</button>
+      <button>Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="container">
+    <h1>Get in <span>Touch</span></h1>
+    <p class="subtitle">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+    <div class="contact-boxes">
+      <div class="box">
+        <i style="color: #0f0;">📞</i>
+        <h3>Phone</h3>
+        <p>+91 9123388359<br>+91 9876543210</p>
+      </div>
+      <div class="box">
+        <i style="color: #5fa9ff;">✉️</i>
+        <h3>Email</h3>
+        <p>ieee@aup.ac.in</p>
+      </div>
+      <div class="box">
+        <i style="color: #f55;">📍</i>
+        <h3>Location</h3>
+        <p>Amity University Patna<br>Bihar, India</p>
+      </div>
+    </div>
+
+    <form id="contactForm">
+      <h2>💬 Send us a message</h2>
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <div class="confirmation" id="confirmationMsg">✅ Message sent successfully!</div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const confirmation = document.getElementById("confirmationMsg");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      confirmation.style.display = "block";
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

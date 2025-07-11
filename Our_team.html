@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Team</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: white;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+      background-color: #0b0c10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar .nav-left .icon {
+      color: #5fa9ff;
+      font-size: 1.4rem;
+    }
+
+    .navbar .nav-center {
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    .navbar .nav-center a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-center a:hover {
+      color: #5fa9ff;
+    }
+
+    .navbar .nav-right {
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .navbar .nav-right button {
+      background-color: #2d72fc;
+      color: white;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .team-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .team-header h2 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .team-header h2 span {
+      color: #4aa5ff;
+    }
+
+    .team-header p {
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .team-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .team-stats div h3 {
+      font-size: 1.8rem;
+      color: #4aa5ff;
+    }
+
+    .team-stats div p {
+      color: #aaa;
+    }
+
+    .team-filters {
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      background-color: #1e1e2f;
+      color: #ccc;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: #4aa5ff;
+      color: white;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+    }
+
+    .team-member {
+      background: #1a1a2e;
+      border-radius: 15px;
+      padding: 20px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-member img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .team-member h4 {
+      margin: 15px 0 5px;
+    }
+
+    .team-member .role {
+      color: #4aa5ff;
+      font-weight: bold;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      color: #ccc;
+      margin: 0 6px;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #4aa5ff;
+    }
+
+    @media (max-width: 768px) {
+      .navbar .nav-center {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html">🔷 IEEE AUP</a></span>
+    </div>
+    <nav class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="Events.html">Events</a>
+      <a href="Our_team.html">Our Team</a>
+      <a href="workshop.html">Workshop</a>
+      <a href="About-us.html">About Us</a>
+      <a href="Contact_us.html">Contact Us</a>
+    </nav>
+    <div class="nav-right">
+      <button>Sign In</button>
+      <button>Sign Up</button>
+    </div>
+  </header>
+
+  <!-- ✅ Team Section -->
+  <section id="team" class="team-section">
+    <div class="team-header">
+      <h2>Meet Our <span>Team</span></h2>
+      <p>The passionate individuals driving innovation and excellence.</p>
+      <div class="team-stats">
+        <div><h3>50+</h3><p>Active Projects</p></div>
+        <div><h3>100+</h3><p>Team Members</p></div>
+        <div><h3>30+</h3><p>Awards Won</p></div>
+        <div><h3>150+</h3><p>Events Organized</p></div>
+      </div>
+      <div class="team-filters">
+        <button class="filter-btn active" data-filter="all">All Teams</button>
+        <button class="filter-btn" data-filter="management">Management</button>
+        <button class="filter-btn" data-filter="technical">Technical</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="content">Content</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+        <button class="filter-btn" data-filter="executive">Executive</button>
+      </div>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-member management">
+        <img src="https://via.placeholder.com/300x220?text=Prateek+Krishna" alt="Prateek Krishna">
+        <h4>Prateek Krishna</h4>
+        <p class="role">President</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fas fa-globe"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member management">
+        <img src="https://via.placeholder.com/300x220?text=Gajendra+Agarwal" alt="Gajendra Agarwal">
+        <h4>Gajendra Agarwal</h4>
+        <p class="role">Vice President</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fas fa-globe"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member management">
+        <img src="https://via.placeholder.com/300x220?text=Vaishali+Jain" alt="Vaishali Jain">
+        <h4>Vaishali Jain</h4>
+        <p class="role">Vice President</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fas fa-globe"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="team-member management">
+        <img src="https://via.placeholder.com/300x220?text=Divjot+Singh" alt="Divjot Singh">
+        <h4>Divjot Singh</h4>
+        <p class="role">Director</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fas fa-globe"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Filter Script -->
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const members = document.querySelectorAll('.team-member');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        members.forEach(member => {
+          if (filter === 'all' || member.classList.contains(filter)) {
+            member.style.display = 'block';
+          } else {
+            member.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

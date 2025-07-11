@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarav's Profile</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #1e1e2f, #292942);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+        .profile-container {
+            background: #fff;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            background: #ddd;
+        }
+        h1 {
+            margin: 12px 0 8px 0;
+        }
+        .bio {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .info-list li {
+            margin: 8px 0;
+        }
+        .contact-btn {
+            display: inline-block;
+            padding: 10px 24px;
+            background: #0078d7;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+        .contact-btn:hover {
+            background: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="aarav pic.jpg" alt="Aarav's Photo" class="profile-img">
+        <h1>Aarav Pal</h1>
+        <p class="bio">Aspiring web developer passionate about technology, coding, and innovation. IEEE member and lifelong learner.</p>
+        <ul class="info-list">
+            <li><strong>Email:</strong> aarav.sharma@email.com</li>
+            <li><strong>Location:</strong> Patna,Bihar,India</li>
+            <li><strong>Skills:</strong> HTML, CSS, JavaScript, Python</li>
+        </ul>
+        <a href="mailto:aarav.sharma@email.com" class="contact-btn">Contact Me</a>
+    </div>
+</body>
+</html>
